@@ -300,6 +300,31 @@ if [[ -f "$target/data/runtime.json" ]]; then as_user "${install_env[@]}" bash "
 else as_user "${install_env[@]}" bash "$target/deploy/install.sh" --bind 127.0.0.1; fi
 # Installs the proxy-aware Codex launcher in the account's normal SSH PATH.
 [[ -f "$target/deploy/setup-desktop-ssh.py" && ! -L "$target/deploy/setup-desktop-ssh.py" ]] || die 'Release is missing desktop SSH integration.'
+# First login normally creates data/codex, but desktop SSH setup runs before login.
+# Prepare only the default directory, as its owner, without changing existing auth.
+as_user "$python_bin" - "$target" <<'PY-CODEX-HOME'
+import json, stat, sys
+from pathlib import Path
+
+root = Path(sys.argv[1])
+data = root / 'data'
+for directory in (root, data):
+    if not stat.S_ISDIR(directory.lstat().st_mode):
+        raise SystemExit('Codex authorization parent must be an ordinary directory, not a link.')
+runtime = json.loads((data / 'runtime.json').read_text(encoding='utf-8'))
+configured = Path(runtime.get('codex_home', 'data/codex'))
+if not configured.is_absolute():
+    configured = root / configured
+codex_home = data / 'codex'
+if configured != codex_home:
+    # Custom CODEX_HOME follows the existing helper's strict validation policy.
+    raise SystemExit(0)
+try:
+    codex_home.mkdir(mode=0o700)
+except FileExistsError:
+    if not stat.S_ISDIR(codex_home.lstat().st_mode):
+        raise SystemExit('Codex authorization path must be an ordinary directory, not a link.')
+PY-CODEX-HOME
 as_user "${install_env[@]}" "$python_bin" "$target/deploy/setup-desktop-ssh.py" --root "$target"
 as_user "$target/bin/mihomo" -v
 as_user "$target/bin/codex" --version

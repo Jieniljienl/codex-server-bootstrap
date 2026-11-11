@@ -8,8 +8,11 @@ import io
 import json
 import os
 from pathlib import Path
+import re
 import shutil
+import stat
 import subprocess
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -96,6 +99,16 @@ def configure(values):
                          bundle_dir=values["bundle"], fetch=values["fetch"])
 
 
+def prepare_codex_home(root):
+    """Execute the shipped pre-helper bootstrap step, without running installer."""
+    source = (ROOT / "server-bootstrap.sh").read_text(encoding="utf-8")
+    match = re.search(r"<<'PY-CODEX-HOME'\n(.*?)\nPY-CODEX-HOME", source, re.DOTALL)
+    if not match:
+        raise AssertionError("Missing Codex authorization directory preparation step")
+    return subprocess.run([sys.executable, "-", str(root)], input=match.group(1),
+                          text=True, capture_output=True)
+
+
 def bash_path(path):
     result = subprocess.run([BASH, "--noprofile", "--norc", "-c", 'cd -- "$1" && pwd -P',
                              "path", path.as_posix()], capture_output=True, check=True)
@@ -103,6 +116,54 @@ def bash_path(path):
 
 
 class DesktopPayloadTests(unittest.TestCase):
+    def test_fresh_bootstrap_prepares_auth_directory_before_desktop_setup(self):
+        with installation() as values, patch.object(desktop, "proxy_download") as download:
+            codex_home = values["root"] / "data/codex"
+            (codex_home / "auth.json").unlink()
+            codex_home.rmdir()
+            # This is the observed first-install failure in the released helper.
+            with self.assertRaises(FileNotFoundError):
+                configure(values)
+            self.assertFalse((values["home"] / ".local/bin/codex").exists())
+            result = prepare_codex_home(values["root"])
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertTrue(codex_home.is_dir())
+            self.assertEqual(list(codex_home.iterdir()), [])
+            if os.name != "nt":
+                self.assertEqual(stat.S_IMODE(codex_home.stat().st_mode), 0o700)
+            configured = configure(values)
+            self.assertEqual(configured["changed"], 3)
+            self.assertFalse(configured["restored"])
+            download.assert_not_called()
+            # A retry must retain authorization acquired after the first install.
+            authorization = codex_home / "auth.json"
+            authorization.write_bytes(values["authorization"])
+            retry = prepare_codex_home(values["root"])
+            self.assertEqual(retry.returncode, 0, retry.stderr)
+            self.assertEqual(authorization.read_bytes(), values["authorization"])
+
+    def test_bootstrap_refuses_a_file_at_the_auth_directory_path(self):
+        with installation() as values:
+            codex_home = values["root"] / "data/codex"
+            (codex_home / "auth.json").unlink()
+            codex_home.rmdir()
+            codex_home.write_bytes(b"existing file must survive")
+            result = prepare_codex_home(values["root"])
+            self.assertNotEqual(result.returncode, 0)
+            self.assertEqual(codex_home.read_bytes(), b"existing file must survive")
+
+    def test_bootstrap_keeps_custom_codex_home_unchanged(self):
+        with installation() as values:
+            codex_home = values["root"] / "data/codex"
+            (codex_home / "auth.json").unlink()
+            codex_home.rmdir()
+            runtime = values["root"] / "data/runtime.json"
+            runtime.write_text(json.dumps({"proxy_port": 17891, "codex_home": "custom-auth"}), encoding="utf-8")
+            result = prepare_codex_home(values["root"])
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertFalse(codex_home.exists())
+            self.assertFalse((values["root"] / "custom-auth").exists())
+
     def test_setup_preserves_auth_and_profiles_and_is_idempotent(self):
         with installation() as values, patch.object(desktop, "proxy_download") as download:
             with contextlib.redirect_stdout(io.StringIO()) as output:
