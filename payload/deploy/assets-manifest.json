@@ -1,0 +1,528 @@
+{
+  "schema_version": 1,
+  "target": "Ubuntu 24.04 x86_64",
+  "assets": [
+    {
+      "name": "mihomo",
+      "version": "v1.19.32",
+      "platform": "linux-amd64",
+      "path": "bin/linux-amd64/mihomo",
+      "sha256": "7a0d59da2e678d56c899a3db996a2ad8963286c4f3634b0451435db248f13fa1",
+      "size": 62054526,
+      "source_url": "https://github.com/MetaCubeX/mihomo/releases/download/v1.19.32/mihomo-linux-amd64-compatible-v1.19.32.gz",
+      "archive_name": "mihomo-linux-amd64-compatible-v1.19.32.gz",
+      "archive_sha256": "ba3ce607747a07f948fc35780e108a4a7c7f552a38b9bd4d115f313ebcb89c20",
+      "upstream_digest_source": "https://api.github.com/repos/MetaCubeX/mihomo/releases/tags/v1.19.32",
+      "license_url": "https://raw.githubusercontent.com/MetaCubeX/mihomo/v1.19.32/LICENSE",
+      "archive_members": [],
+      "url": "https://github.com/MetaCubeX/mihomo/releases/download/v1.19.32/mihomo-linux-amd64-compatible-v1.19.32.gz",
+      "binary_sha256": "7a0d59da2e678d56c899a3db996a2ad8963286c4f3634b0451435db248f13fa1",
+      "gzip": true,
+      "archive_member": null
+    },
+    {
+      "name": "cli-proxy-api",
+      "version": "v8.0.35",
+      "platform": "linux-amd64",
+      "path": "bin/linux-amd64/cli-proxy-api",
+      "sha256": "7d2fff1780cf680704ed9df1204c4d7362d21f1c7ec7788de4f1a2394c025583",
+      "size": 71118824,
+      "source_url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v8.0.35/CLIProxyAPI_8.0.35_linux_amd64.tar.gz",
+      "archive_name": "CLIProxyAPI_8.0.35_linux_amd64.tar.gz",
+      "archive_sha256": "1d9edde6973e8f15694debcd186b5ab693e0741bd6a4c5e551aa89e0a6b57e38",
+      "upstream_digest_source": "https://api.github.com/repos/router-for-me/CLIProxyAPI/releases/tags/v8.0.35",
+      "license_url": "https://raw.githubusercontent.com/router-for-me/CLIProxyAPI/v8.0.35/LICENSE",
+      "archive_members": [
+        "cli-proxy-api",
+        "LICENSE",
+        "README.md",
+        "README_CN.md",
+        "config.example.yaml"
+      ],
+      "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v8.0.35/CLIProxyAPI_8.0.35_linux_amd64.tar.gz",
+      "binary_sha256": "7d2fff1780cf680704ed9df1204c4d7362d21f1c7ec7788de4f1a2394c025583",
+      "gzip": false,
+      "archive_member": "cli-proxy-api"
+    },
+    {
+      "name": "codex",
+      "version": "rust-v0.163.0",
+      "platform": "linux-amd64",
+      "path": "bin/linux-amd64/codex-package/bin/codex",
+      "sha256": "399ff69c431c066e40de318fba45c2b07f45a76b19939d247ee4828fc70c4215",
+      "size": 296865480,
+      "source_url": "https://github.com/openai/codex/releases/download/rust-v0.163.0/codex-package-x86_64-unknown-linux-musl.tar.gz",
+      "archive_name": "codex-package-x86_64-unknown-linux-musl.tar.gz",
+      "archive_sha256": "582646c6bf0561eb0de540f7fc85b9121b0091a826bc6e96830b7f1722122182",
+      "upstream_digest_source": "https://api.github.com/repos/openai/codex/releases/tags/rust-v0.163.0",
+      "license_url": "https://raw.githubusercontent.com/openai/codex/rust-v0.163.0/LICENSE",
+      "archive_members": [
+        "bin",
+        "bin/codex",
+        "bin/codex-code-mode-host",
+        "codex-package.json",
+        "codex-path",
+        "codex-path/rg",
+        "codex-resources",
+        "codex-resources/bwrap",
+        "codex-resources/voice",
+        "codex-resources/voice/NOTICE.md",
+        "codex-resources/voice/bin",
+        "codex-resources/voice/bin/codex-voice-host",
+        "codex-resources/voice/lib",
+        "codex-resources/voice/lib/gstreamer-1.0",
+        "codex-resources/voice/lib/gstreamer-1.0/libgstapp.so",
+        "codex-resources/voice/lib/gstreamer-1.0/libgstaudioconvert.so",
+        "codex-resources/voice/lib/gstreamer-1.0/libgstaudioresample.so",
+        "codex-resources/voice/lib/gstreamer-1.0/libgstcoreelements.so",
+        "codex-resources/voice/lib/gstreamer-1.0/libgstopus.so",
+        "codex-resources/voice/lib/gstreamer-1.0/libgstrtp.so",
+        "codex-resources/voice/lib/gstreamer-1.0/libgstrtpmanager.so",
+        "codex-resources/voice/lib/libffi.so.8",
+        "codex-resources/voice/lib/libgio-2.0.so.0",
+        "codex-resources/voice/lib/libglib-2.0.so.0",
+        "codex-resources/voice/lib/libgmodule-2.0.so.0",
+        "codex-resources/voice/lib/libgobject-2.0.so.0",
+        "codex-resources/voice/lib/libgstallocators-1.0.so.0",
+        "codex-resources/voice/lib/libgstapp-1.0.so.0",
+        "codex-resources/voice/lib/libgstaudio-1.0.so.0",
+        "codex-resources/voice/lib/libgstbase-1.0.so.0",
+        "codex-resources/voice/lib/libgstnet-1.0.so.0",
+        "codex-resources/voice/lib/libgstpbutils-1.0.so.0",
+        "codex-resources/voice/lib/libgstreamer-1.0.so.0",
+        "codex-resources/voice/lib/libgstrtp-1.0.so.0",
+        "codex-resources/voice/lib/libgsttag-1.0.so.0",
+        "codex-resources/voice/lib/libgstvideo-1.0.so.0",
+        "codex-resources/voice/lib/libintl.so.8",
+        "codex-resources/voice/lib/libopus.so.0",
+        "codex-resources/voice/lib/libpcre2-8.so.0",
+        "codex-resources/voice/lib/libz.so.1",
+        "codex-resources/voice/licenses",
+        "codex-resources/voice/licenses/LGPL-2.1.txt",
+        "codex-resources/voice/licenses/Opus.txt",
+        "codex-resources/voice/licenses/PCRE2.md",
+        "codex-resources/voice/licenses/libffi.txt",
+        "codex-resources/voice/licenses/proxy-libintl.txt",
+        "codex-resources/voice/licenses/sljit.txt",
+        "codex-resources/voice/licenses/zlib.txt",
+        "codex-resources/voice/manifest.json",
+        "codex-resources/voice/runtime.json",
+        "codex-resources/voice/sources.json"
+      ],
+      "url": "https://github.com/openai/codex/releases/download/rust-v0.163.0/codex-package-x86_64-unknown-linux-musl.tar.gz",
+      "binary_sha256": "399ff69c431c066e40de318fba45c2b07f45a76b19939d247ee4828fc70c4215",
+      "gzip": false,
+      "archive_member": "bin/codex",
+      "package_root": "bin/linux-amd64/codex-package",
+      "archive_root": ".",
+      "package_files": [
+        {
+          "path": "bin/linux-amd64/codex-package/bin/codex",
+          "sha256": "399ff69c431c066e40de318fba45c2b07f45a76b19939d247ee4828fc70c4215",
+          "size": 296865480,
+          "executable": true,
+          "archive_member": "bin/codex"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/bin/codex-code-mode-host",
+          "sha256": "8724d73ec190536233ab4628d24a071bfbcf27e5124f08fe35129f26fe48b916",
+          "size": 74277776,
+          "executable": true,
+          "archive_member": "bin/codex-code-mode-host"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-package.json",
+          "sha256": "5fa8533bde21972564cbb2c665c99c6d6d0e92b625fa6f4fdf1354ac5fb71a78",
+          "size": 205,
+          "executable": false,
+          "archive_member": "codex-package.json"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-path/rg",
+          "sha256": "e62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849",
+          "size": 5408904,
+          "executable": true,
+          "archive_member": "codex-path/rg"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/bwrap",
+          "sha256": "77360cb751ccedc5971391444ac86a8a33c15b04d6b4a6fe45f5d25496e62c4c",
+          "size": 529776,
+          "executable": true,
+          "archive_member": "codex-resources/bwrap"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/NOTICE.md",
+          "sha256": "40097a1799441051aa0b6645cdc819cceb19be73cdd265eb602aa2b15e0b1f48",
+          "size": 2403,
+          "executable": false,
+          "archive_member": "codex-resources/voice/NOTICE.md"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/bin/codex-voice-host",
+          "sha256": "63c71195198947c347d32e5a22496a77a6bd0f9f20ea221c8ff23afcd2ef615f",
+          "size": 40474688,
+          "executable": true,
+          "archive_member": "codex-resources/voice/bin/codex-voice-host"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/gstreamer-1.0/libgstapp.so",
+          "sha256": "0d3f1beec96331bc43385e80ef75ef53e4c159b019e18b3e9f075db1331a0d45",
+          "size": 6488,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/gstreamer-1.0/libgstapp.so"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/gstreamer-1.0/libgstaudioconvert.so",
+          "sha256": "3e09dacb2e23a55c329cac82a8edc45902a7e4c5c1e04fa1d0210a56cc3e0515",
+          "size": 41040,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/gstreamer-1.0/libgstaudioconvert.so"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/gstreamer-1.0/libgstaudioresample.so",
+          "sha256": "365192116e1e5f49dd40abd5f367edd2ddd55b697bec7864ef4b8c3cce8b4c28",
+          "size": 35264,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/gstreamer-1.0/libgstaudioresample.so"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/gstreamer-1.0/libgstcoreelements.so",
+          "sha256": "6da8c18d850a4446f6c82b3fc83d818ce4d5c93a2a05543540bb924b088d11af",
+          "size": 479848,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/gstreamer-1.0/libgstcoreelements.so"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/gstreamer-1.0/libgstopus.so",
+          "sha256": "43bafaa50bf566c3b9441a1c70ff149902e4bb81419d2fc768b612b42eed39f4",
+          "size": 73464,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/gstreamer-1.0/libgstopus.so"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/gstreamer-1.0/libgstrtp.so",
+          "sha256": "e92445b9fd8a88da735f3b4292ad8fde06e5956875063acf651e6fbf23d14ab6",
+          "size": 757800,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/gstreamer-1.0/libgstrtp.so"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/gstreamer-1.0/libgstrtpmanager.so",
+          "sha256": "f7a8ec1e2d3db9bbe5dcc95ea3fe85d29dcc0412cbab1e6d80a97bf262a8cfb5",
+          "size": 564072,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/gstreamer-1.0/libgstrtpmanager.so"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libffi.so.8",
+          "sha256": "bdec19c4e46b8fbf1c3e0b39f7b3fad933b77b43e2c37631157c97950fd2b174",
+          "size": 63096,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libffi.so.8"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libgio-2.0.so.0",
+          "sha256": "0b979fdd4ee61863124192680dfb5986b910882c972e6a02269610b03fb5434a",
+          "size": 2338512,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libgio-2.0.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libglib-2.0.so.0",
+          "sha256": "bfb005d53cbd1b9ae60ba3226c83d5034a16595c35a44682733e521550cce11c",
+          "size": 1521616,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libglib-2.0.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libgmodule-2.0.so.0",
+          "sha256": "8b3abc4191301533e222f115597987fb9e3534406d7bfc11c2ad50f6ef46a973",
+          "size": 15720,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libgmodule-2.0.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libgobject-2.0.so.0",
+          "sha256": "a367f69850d4ba782ef10bdbf1f36706ac757b2c0f33f8b31fe534ce4c28134c",
+          "size": 454720,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libgobject-2.0.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libgstallocators-1.0.so.0",
+          "sha256": "1c8aa524e1dec2d665388c030b3ec7a8500c20347ea6f0b89a38403cfc8e08cf",
+          "size": 30416,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libgstallocators-1.0.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libgstapp-1.0.so.0",
+          "sha256": "b925905fda01b2c1ca9493ae9ae2333a150f1434817e844f6d0be0130954dc37",
+          "size": 106144,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libgstapp-1.0.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libgstaudio-1.0.so.0",
+          "sha256": "37f41aefafda9c7b9a849db7b6805eacaf443230ee7c8cbb6dae20a1977b6e5c",
+          "size": 636544,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libgstaudio-1.0.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libgstbase-1.0.so.0",
+          "sha256": "f29102c4d8107529a1f8f84cbb405df30944e3945de65b22946ee3b91a61cfcf",
+          "size": 573072,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libgstbase-1.0.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libgstnet-1.0.so.0",
+          "sha256": "b54b294a2aae2a65ed7064dc451bafd054a6bafb60ef4adcdb7502da91bac9d9",
+          "size": 74192,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libgstnet-1.0.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libgstpbutils-1.0.so.0",
+          "sha256": "51f4b5a590d1e1b7d8b16fc87f8e0482ed1b456d39f06002bfe511946396e109",
+          "size": 321880,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libgstpbutils-1.0.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libgstreamer-1.0.so.0",
+          "sha256": "ed2d53764156bdedcac239a7402ed0b4e974d5f8261b71a76e2acd07d844038e",
+          "size": 1582088,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libgstreamer-1.0.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libgstrtp-1.0.so.0",
+          "sha256": "3718a3bc886e499d2c97c1c1f0b2d3d25e9efac9ab70b77decc9c3f22a77dd76",
+          "size": 211744,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libgstrtp-1.0.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libgsttag-1.0.so.0",
+          "sha256": "0ace6f9258b42033979b997f52c6b7394493ac35e61a2ae51d5a5806a99d722e",
+          "size": 273976,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libgsttag-1.0.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libgstvideo-1.0.so.0",
+          "sha256": "1b1169be1951dd106318b102427509130d5f2a5d396bc6a9f450b840f5ee17d1",
+          "size": 1004720,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libgstvideo-1.0.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libintl.so.8",
+          "sha256": "3745518bbcd678e70f7560496596c8adc8b9215d23839c5eb2d0dea0bce3975a",
+          "size": 6304,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libintl.so.8"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libopus.so.0",
+          "sha256": "95d8a0d04ce2a6d9ef8184987b88933f235986ab10520999068b8df0e1a9bfe2",
+          "size": 565744,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libopus.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libpcre2-8.so.0",
+          "sha256": "e39519b242f40686734ed8d0218f68cac24f0e956ec64c8c1b49b9da5cc9788b",
+          "size": 442424,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libpcre2-8.so.0"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/lib/libz.so.1",
+          "sha256": "6c5d765f42d9368cc4bdbd11f725c1bcf6b14b78322033d3c94f787fc6261f5e",
+          "size": 109296,
+          "executable": true,
+          "archive_member": "codex-resources/voice/lib/libz.so.1"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/licenses/LGPL-2.1.txt",
+          "sha256": "ad2eec519ebd4b5df86ea84dff24ae3bfa2edea846a703b58902dd221ae375db",
+          "size": 26431,
+          "executable": false,
+          "archive_member": "codex-resources/voice/licenses/LGPL-2.1.txt"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/licenses/Opus.txt",
+          "sha256": "01e1167d54a096d123cf6dfbbeb19587278845c6481d2d66d545669846079551",
+          "size": 1945,
+          "executable": false,
+          "archive_member": "codex-resources/voice/licenses/Opus.txt"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/licenses/PCRE2.md",
+          "sha256": "197d8a73ffee0d6b09adba2f9c677b5f5aede24edf89258a68e48248d010d811",
+          "size": 4011,
+          "executable": false,
+          "archive_member": "codex-resources/voice/licenses/PCRE2.md"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/licenses/libffi.txt",
+          "sha256": "17b64dc60f3b6897a60f971e288b973f655c2edcdf08b25f3c3dd5549857881c",
+          "size": 1132,
+          "executable": false,
+          "archive_member": "codex-resources/voice/licenses/libffi.txt"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/licenses/proxy-libintl.txt",
+          "sha256": "d245807f90032872d1438d741ed21e2490e1175dc8aa3afa5ddb6c8e529b58e5",
+          "size": 25292,
+          "executable": false,
+          "archive_member": "codex-resources/voice/licenses/proxy-libintl.txt"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/licenses/sljit.txt",
+          "sha256": "5f216505c0f6ea3273caec89e766eef93cdeb7bbb0c429f9360116d7c938feeb",
+          "size": 1444,
+          "executable": false,
+          "archive_member": "codex-resources/voice/licenses/sljit.txt"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/licenses/zlib.txt",
+          "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2",
+          "size": 1002,
+          "executable": false,
+          "archive_member": "codex-resources/voice/licenses/zlib.txt"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/manifest.json",
+          "sha256": "41c63db714036c52a7a72892e34e072044c9199ed43b9b4b1e0a6428e7fa1b35",
+          "size": 4768,
+          "executable": false,
+          "archive_member": "codex-resources/voice/manifest.json"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/runtime.json",
+          "sha256": "0525052f851810c7403eec0b4b1534d8161a70f581dcb607a64b7287b093ec72",
+          "size": 13941,
+          "executable": true,
+          "archive_member": "codex-resources/voice/runtime.json"
+        },
+        {
+          "path": "bin/linux-amd64/codex-package/codex-resources/voice/sources.json",
+          "sha256": "e2f6b124f6277e7c3c4f5c7cc8830c66190f671ad65e972bb2cc9507dbfcb937",
+          "size": 4911,
+          "executable": false,
+          "archive_member": "codex-resources/voice/sources.json"
+        }
+      ],
+      "archive_package_root": "."
+    }
+  ],
+  "wheels": [
+    {
+      "path": "wheels/blinker-1.9.0-py3-none-any.whl",
+      "sha256": "ba0efaa9080b619ff2f3459d1d500c57bddea4a6b424b60a91141db6fd2f08bc",
+      "size": 8458,
+      "source": "https://pypi.org/simple/"
+    },
+    {
+      "path": "wheels/click-8.5.0-py3-none-any.whl",
+      "sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360",
+      "size": 125251,
+      "source": "https://pypi.org/simple/"
+    },
+    {
+      "path": "wheels/flask-3.1.2-py3-none-any.whl",
+      "sha256": "ca1d8112ec8a6158cc29ea4858963350011b5c846a414cdb7a954aa9e967d03c",
+      "size": 103308,
+      "source": "https://pypi.org/simple/"
+    },
+    {
+      "path": "wheels/itsdangerous-2.2.0-py3-none-any.whl",
+      "sha256": "c6242fc49e35958c8b15141343aa660db5fc54d4f13a1db01a3f5891b98700ef",
+      "size": 16234,
+      "source": "https://pypi.org/simple/"
+    },
+    {
+      "path": "wheels/jinja2-3.1.6-py3-none-any.whl",
+      "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+      "size": 134899,
+      "source": "https://pypi.org/simple/"
+    },
+    {
+      "path": "wheels/markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "8e124f974786f831d6043728e38296969d3579db8896fe004682f5758e613581",
+      "size": 22985,
+      "source": "https://pypi.org/simple/"
+    },
+    {
+      "path": "wheels/pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "ba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc",
+      "size": 807870,
+      "source": "https://pypi.org/simple/"
+    },
+    {
+      "path": "wheels/waitress-3.0.2-py3-none-any.whl",
+      "sha256": "c56d67fd6e87c2ee598b76abdd4e96cfad1f24cacdea5078d382b1f9d7b5ed2e",
+      "size": 56232,
+      "source": "https://pypi.org/simple/"
+    },
+    {
+      "path": "wheels/werkzeug-3.1.9-py3-none-any.whl",
+      "sha256": "6392e50c78460ba618e5b21f08a71f59c99ce99cdc6cf6e3dd7e6ccca8754fab",
+      "size": 228700,
+      "source": "https://pypi.org/simple/"
+    }
+  ],
+  "architecture": "linux-amd64",
+  "licenses": [
+    {
+      "path": "bin/linux-amd64/mihomo.LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "bin/linux-amd64/cli-proxy-api.LICENSE",
+      "sha256": "879792e89cf1bdd6a8d446033ec87e30496f97dcafc4656dc53f641509b346a6"
+    },
+    {
+      "path": "bin/linux-amd64/codex.LICENSE",
+      "sha256": "d17f227e4df5da1600391338865ce0f3055211760a36688f816941d58232d8dc"
+    },
+    {
+      "path": "bin/linux-amd64/codex.NOTICE",
+      "sha256": "9d71575ecfd9a843fc1677b0efb08053c6ba9fd686a0de1a6f5382fd3c220915"
+    },
+    {
+      "path": "bin/linux-amd64/codex-licenses/bwrap.COPYING",
+      "sha256": "b7993225104d90ddd8024fd838faf300bea5e83d91203eab98e29512acebd69c",
+      "source_url": "https://raw.githubusercontent.com/openai/codex/rust-v0.163.0/codex-rs/vendor/bubblewrap/COPYING"
+    },
+    {
+      "path": "bin/linux-amd64/codex-licenses/rg.LICENSE-MIT",
+      "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f",
+      "source_url": "https://raw.githubusercontent.com/BurntSushi/ripgrep/15.2.0/LICENSE-MIT"
+    },
+    {
+      "path": "bin/linux-amd64/codex-licenses/rg.UNLICENSE",
+      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c",
+      "source_url": "https://raw.githubusercontent.com/BurntSushi/ripgrep/15.2.0/UNLICENSE"
+    }
+  ],
+  "sources": [
+    {
+      "path": "source/mihomo-v1.19.32.tar.gz",
+      "source_url": "https://github.com/MetaCubeX/mihomo/archive/refs/tags/v1.19.32.tar.gz",
+      "size": 1269041,
+      "sha256": "ab130b7fab3893d01aa44c0d39be34a26da716c1d36832fbac9fa054a1d862a0"
+    },
+    {
+      "path": "source/codex-rust-v0.163.0.tar.gz",
+      "source_url": "https://github.com/openai/codex/archive/refs/tags/rust-v0.163.0.tar.gz",
+      "size": 17505520,
+      "sha256": "5990ddb133184ce5e470c741d14f1eeb24a0b6cd36685ef78fb772cf83cab7fc"
+    }
+  ]
+}

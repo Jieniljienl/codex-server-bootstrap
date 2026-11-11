@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "repository": "Jieniljienl/codex-server-bootstrap",
+  "tag": "v0.1.0",
+  "asset": "ai-proxy-hub-1.0.0.zip",
+  "sha256": "95abedd0f817c3a01487bb8131db1dec69c326236523d25c6afe83cf6dc8b23b",
+  "root": "ai-proxy-hub-1.0.0"
+}
